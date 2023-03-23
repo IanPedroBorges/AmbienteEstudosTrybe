@@ -1,14 +1,32 @@
-h1, p {
-  text-align: center;
+ol li{
+  background-color: yellow;
 }
-ol li:hover {
-  background-color: green;
-  transition: 1s;
+.par {
+  color: green;
 }
-ol li:active {
+.impar {
+  text-transform: uppercase;
+}
+.header {
   color: red;
-  transition: 0,2s;
 }
-ol li {
-  list-style: none;
+.italico {
+  font-size: 40px;
+  border: 1px solid black;
+}
+li {
+  font-size: 20px;
+}
+li em {
+  font-weight: bold;
+}
+.blue {
+  color: blue;
+}
+.pink {
+  background-color: pink;
+}
+.aliados a:hover{
+  font-weight: bold;
+  color: white;
 }
