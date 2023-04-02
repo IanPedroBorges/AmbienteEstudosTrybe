@@ -305,7 +305,7 @@ function adicionaClientes(cliente){
 adicionaClientes('Ian')
 console.log (clientesTrybeBank)
 function removerCliente()
-*/
+-----------------------
 let player = {
     name: 'Marta',
     lastName: 'Silva',
@@ -319,3 +319,22 @@ player['fullName'] = player.name + ' ' + player.lastName;
 player['bestInTheWorld'] = [2006, 2007, 2008, 2009, 2010, 2018];
 console.log(player.name + ' ' + player.lastName + ' tem ' + player.age + ' anos , e ganhou ' + player.medals.golden + ' medalhas de ouro, e '  + player.medals.silver + ' medalhas de prata.');
 console.log(player.bestInTheWorld)
+*/
+
+let names = {
+    person1: 'João',
+    person2: 'Maria',
+    person3: 'Jorge',
+  };
+  for (const key in names) {
+    console.log('Olá, ' + names[key])
+  }
+
+  let car = {
+    model: 'A3 Sedan',
+    manufacturer: 'Audi',
+    year: 2020
+  };
+  for (const key in car) {
+    console.log(key, car[key])
+  }
