@@ -319,13 +319,14 @@ player['fullName'] = player.name + ' ' + player.lastName;
 player['bestInTheWorld'] = [2006, 2007, 2008, 2009, 2010, 2018];
 console.log(player.name + ' ' + player.lastName + ' tem ' + player.age + ' anos , e ganhou ' + player.medals.golden + ' medalhas de ouro, e '  + player.medals.silver + ' medalhas de prata.');
 console.log(player.bestInTheWorld)
-*/
+----------------------------------------------------------------------
 
 let names = {
     person1: 'João',
     person2: 'Maria',
     person3: 'Jorge',
   };
+
   for (const key in names) {
     console.log('Olá, ' + names[key])
   }
@@ -335,6 +336,198 @@ let names = {
     manufacturer: 'Audi',
     year: 2020
   };
+
   for (const key in car) {
     console.log(key, car[key])
   }
+  ---------------------------------------------------
+
+
+
+  let eu = {};
+
+  function adicionandoConteudoObjeto(object, key, value){
+    object[key] = value;
+  }
+
+  adicionandoConteudoObjeto(eu, 'name', 'Ian');
+  adicionandoConteudoObjeto(eu, 'lastName', 'Borges');
+  adicionandoConteudoObjeto(eu, 'age', 24);
+  adicionandoConteudoObjeto(eu, 'city', 'Coroaci');
+  console.log(eu)
+
+
+  ---------exercicios praticos modulo fundamento secao 3 , objetos
+*/
+
+
+let info = {
+    personagem: 'Margarida',
+    origem: 'Pato Donald',
+    nota: 'Namorada do personagem principal nos quadrinhos do Pato Donald',
+  };
+
+ // console.log('Boas-Vindas ' + info.personagem)
+
+  info['recorrente'] = 'Sim';
+  //console.log(info);
+
+ /* for(let key in info){
+    console.log(key);
+  }
+  let chaves = Object.keys(info);
+
+  console.log(chaves);
+
+  for(let key in info){
+    console.log(info[key]);
+  }
+
+  let values = Object.values(info);
+
+  console.log(values);
+
+ let info2 = {
+    personagem: 'Tio Patinhas',
+    origem: 'Christmas on Bear Mountain, Dells Four Color Comics #178',
+    nota: 'O último MacPatinhas',
+    recorrente: 'Ambos recorrentes'
+ }
+
+ Object.assign(info,info2);
+ console.log(info)
+
+---------------------------------
+
+ let leitor = {
+    nome: 'Julia',
+    sobrenome: 'Pessoa',
+    idade: 21,
+    livrosFavoritos: [
+      {
+        titulo: 'O Pior Dia de Todos',
+        autor: 'Daniela Kopsch',
+        editora: 'Tordesilhas',
+      },
+    ],
+  };
+  console.log(`O livro favorito de ${leitor.nome + ' ' + leitor.sobrenome} se chama ${leitor.livrosFavoritos[0].titulo}`)
+  leitor.livrosFavoritos[1] = {
+    titulo: 'Harry Potter e o Prisioneiro de Azkaban',
+    autor: 'JK Rowling',
+    editora: 'Rocco',
+  }
+  console.log(`Julia tem ${leitor.livrosFavoritos.length} livros favoritos`);
+
+  -----------------------------------------------
+
+
+
+
+  let order = {
+    name: 'Rafael Andrade',
+    phoneNumber: '11-98763-1416',
+    address: {
+      street: 'Rua das Flores',
+      number: '389',
+      apartment: '701',
+    },
+    order: {
+      pizza: {
+        marguerita: {
+          amount: 1,
+          price: 25,
+        },
+        pepperoni: {
+          amount: 1,
+          price: 20,
+        },
+      },
+      drinks: {
+        coke: {
+          type: 'Coca-Cola Zero',
+          price: 10,
+          amount: 1,
+        },
+      },
+      delivery: {
+        deliveryPerson: 'Ana Silveira',
+        price: 5,
+      },
+    },
+    payment: {
+      total: 60,
+    },
+  };
+  
+  function customerInfo(order) {
+    // Adicione abaixo as informações necessárias.
+    return order = true;
+  }
+  
+  customerInfo(order);
+  
+  function orderModifier(order) {
+    // Adicione abaixo as informações necessárias.
+    if (order) {
+      // O erro estava aqui. Deveria ter colocado "order.order.delivery.deliveryPerson"
+      order.name = 'Luiz Silva';
+      order.payment.total = 50;
+      //return `Olá, ${order.order.delivery.deliveryPerson}, entrega para: ${order.name}, Telefone: ${order.phoneNumber}, R ${order.address.street}, Nº: ${order.address.number}, AP: ${order.address.apartment}`;
+      return `Olá, ${order.name}, o valor total de seu pedido de marguerita, pepperoni e coca-cola é R$ ${order.payment.total}`
+    }
+  }
+  
+  orderModifier(order);
+  console.log(orderModifier(order))
+  
+  ---------------------------------------------------
+     */
+
+
+  let lesson1 = {
+    materia: 'Matemática',
+    numeroEstudantes: 20,
+    professor: 'Maria Clara',
+    turno: 'manhã',
+  };
+  
+  let lesson2 = {
+    materia: 'História',
+    numeroEstudantes: 20,
+    professor: 'Carlos',
+  };
+  
+  let lesson3 = {
+    materia: 'Matemática',
+    numeroEstudantes: 10,
+    professor: 'Maria Clara',
+    turno: 'noite',
+  };
+
+  function addPropiedade(object, key, value){
+    object[key] = value;
+  }
+
+  addPropiedade(lesson2, 'turno', 'noite')
+ 
+  function listKeys(object){
+    console.log(Object.keys(object))
+  }
+
+  listKeys(lesson1)
+
+  function lengthObject(object){
+    console.log(Object.entries(object).length)
+  }
+  
+  lengthObject(lesson1)
+
+  function objectValues(object){
+    console.log(Object.values(object))
+  }
+
+  objectValues(lesson3);
+
+  let allLessons = Object.assign({}, [lesson1, lesson2, lesson3]);
+  console.log(allLessons)
