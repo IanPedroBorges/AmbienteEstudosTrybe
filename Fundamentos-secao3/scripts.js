@@ -482,7 +482,7 @@ let info = {
   console.log(orderModifier(order))
   
   ---------------------------------------------------
-     */
+    
 
 
   let lesson1 = {
@@ -531,3 +531,45 @@ let info = {
 
   let allLessons = Object.assign({}, [lesson1, lesson2, lesson3]);
   console.log(allLessons)
+-------------------------------------------------------
+
+
+function imprimeIdade() {
+  for (let idade = 30; idade <= 40; idade += 1) {
+    console.log('Idade dentro do for:', idade)
+  }
+ // retire essa linha ao implementar o tipo de variável correta.
+}
+imprimeIdade()
+
+  // Executando esse código, recebe-se um erro `TypeError: Assignment to constant variable.`
+ let pessoa = {
+    nome: 'Henri',
+    idade: 20
+  }
+  pessoa = {
+    nome: 'Luna',
+    idade: 19
+  } // Altere essa estrutura para corrigir o erro.
+  console.log('Nome:', pessoa.nome);
+  console.log('Idade:', pessoa.idade);
+
+  const name = 'Adriana';
+  const lastName = 'Soares';
+  console.log(`Olá ${name} ${lastName}!`);
+  function soma(a,b) {
+    let resultado = a + b;
+    return resultado;
+  }
+  let a = 3;
+  let b = 5;
+  console.log(`O resultado da soma de ${a} + ${b} é: ${a + b}`)
+
+     */
+
+  const numeroAleatorio = () =>  Math.random();
+  console.log(numeroAleatorio());
+
+  const hello = (nome) => `Olá, ${nome}!`
+  let nome = 'Ivan';
+  console.log(hello(nome));
