@@ -95,7 +95,7 @@
       const tagSectionRigth = document.querySelector(".rigth-content");
       let ul = document.createElement("ul");
       tagSectionRigth.appendChild(ul);
-      tagSectionRigth.style.margin = 'auto';
+      tagSectionRigth.style.marginRigth = 'auto';
 
       let tagUl = document.querySelector("ul");
       const array = [
@@ -107,6 +107,8 @@
         "seis",
         "sete",
         "oito",
+        "nove",
+        "dez",
       ];
 
       for (let i of array) {
@@ -120,6 +122,8 @@
         h3.className = "description";
         mainCenter.appendChild(h3);
       };
+      ul.lastChild.remove();
+      ul.lastChild.remove();
     </script>
   </body>
 </html>
