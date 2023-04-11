@@ -1,11 +1,15 @@
-const where = document.getElementById('where-are-you');
-const parent = where.parentNode;
-parent.style.color = 'green';
-const firstChild = where.firstElementChild;
-firstChild.innerText = 'olaaa';
-const firstChildParent = parent.firstElementChild;
-const first = where.previousElementSibling;
-const attention = where.nextElementSibling.nextSibling;
-const third = where.nextElementSibling.nextElementSibling;
-const thirdChild = parent.firstElementChild;
-thirdChild.style.backgroundColor = 'black';
+const father = document.getElementById('pai');
+let newBrother = document.createElement('section')
+newBrother.innerHTML = 'eae'
+father.appendChild(newBrother);
+console.log(father);
+const ondeEstou = document.getElementById('elementoOndeVoceEsta');
+let newSon = document.createElement('section');
+newSon.innerHTML = 'ola'
+ondeEstou.appendChild(newSon);
+const SonOfSon = document.getElementById('primeiroFilhoDoFilho');
+let SonOfSonOfSon = document.createElement('section');
+SonOfSonOfSon.innerHTML = 'opa';
+SonOfSon.appendChild(SonOfSonOfSon);
+const terceiroFilho = SonOfSonOfSon.parentNode.parentNode.nextSibling.nextSibling;
+console.log(terceiroFilho)
