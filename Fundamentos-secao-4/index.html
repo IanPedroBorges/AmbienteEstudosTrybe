@@ -1,24 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
-    <main id="paiDoPai">
-      <section id="pai">
-        <section id="primeiroFilho"></section>
-        <section id="elementoOndeVoceEsta">
-          <section id="primeiroFilhoDoFilho"></section>
-          <section id="segundoEUltimoFilhoDoFilho"></section>
-        </section>
-        Atenção!
-        <section id="terceiroFilho"></section>
-        <section id="quartoEUltimoFilho"></section>
-      </section>
-    </main>
-    <script src="scripts.js"></script>
+    <script>
+      const corpo = document.getElementsByTagName("body")[0];
+      let tagH1 = document.createElement("h1");
+      tagH1.innerText = "TrybeTrip - Agência de Viagens";
+      tagH1.className = "title";
+      corpo.appendChild(tagH1);
+
+      let main = document.createElement("main");
+      main.className = "main-content";
+      corpo.appendChild(main);
+
+      const mainCenter = document.querySelector(".main-content");
+      let section = document.createElement("section");
+      section.className = "center-content";
+      mainCenter.appendChild(section);
+      mainCenter.style.backgroundColor = 'green'
+
+      const sectionCenter = document.querySelector(".center-content");
+      let tagP = document.createElement("p");
+      sectionCenter.appendChild(tagP);
+
+      let sectionLeft = document.createElement("section");
+      sectionLeft.className = "left-content";
+      mainCenter.appendChild(sectionLeft);
+
+      let sectionRigth = document.createElement("section");
+      sectionRigth.className = "rigth-content";
+      mainCenter.appendChild(sectionRigth);
+
+      const tagSectionLeft = document.querySelector(".left-content");
+      let img = document.createElement("img");
+      img.src = "https://picsum.photos/200";
+      img.className = "small-image";
+      tagSectionLeft.appendChild(img);
+      mainCenter.removeChild(sectionLeft)
+
+      const tagSectionRigth = document.querySelector(".rigth-content");
+      let ul = document.createElement("ul");
+      tagSectionRigth.appendChild(ul);
+      tagSectionRigth.style.margin = 'auto';
+
+      let tagUl = document.querySelector("ul");
+      const array = [
+        "um",
+        "dois",
+        "três",
+        "quatro",
+        "cinco",
+        "seis",
+        "sete",
+        "oito",
+      ];
+
+      for (let i of array) {
+        let list = document.createElement("li");
+        list.innerHTML = i;
+        tagUl.appendChild(list);
+      };
+
+      for (let i = 0; i < 3; i += 1) {
+        let h3 = document.createElement("h3");
+        h3.className = "description";
+        mainCenter.appendChild(h3);
+      };
+    </script>
   </body>
 </html>
