@@ -1,13 +1,11 @@
-const urgente = document.querySelectorAll('.emergency-tasks h3');
-urgente[0].style.backgroundColor = 'purple';
-urgente[1].style.backgroundColor = 'purple';
-
-const divUrgente = document.querySelectorAll('.emergency-tasks');
-divUrgente[0].style.backgroundColor = 'Salmon';
-
-const naoUrgente = document.querySelectorAll('.no-emergency-tasks h3');
-naoUrgente[0].style.backgroundColor = 'black';
-naoUrgente[1].style.backgroundColor = 'black';
-
-const divNaoUrgente = document.querySelectorAll('.no-emergency-tasks');
-divNaoUrgente[0].style.backgroundColor = 'Khaki'
+const where = document.getElementById('where-are-you');
+const parent = where.parentNode;
+parent.style.color = 'green';
+const firstChild = where.firstElementChild;
+firstChild.innerText = 'olaaa';
+const firstChildParent = parent.firstElementChild;
+const first = where.previousElementSibling;
+const attention = where.nextElementSibling.nextSibling;
+const third = where.nextElementSibling.nextElementSibling;
+const thirdChild = parent.firstElementChild;
+thirdChild.style.backgroundColor = 'black';
